@@ -1,0 +1,139 @@
+.references {
+	min-height: calc(100vh - 210px);
+}
+
+.references > h1 {
+	text-align: center;
+	padding: 30px 0;
+}
+
+.container {
+	width: 60%;
+	margin: auto;
+}
+
+.ref_block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 40px auto;
+}
+
+.ref_block:nth-child(even) {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.ref_block:nth-child(odd) .ref_left {
+	margin-right: 50px;
+}
+
+.ref_left {
+	position: relative;
+	width: 50%;
+	max-width: 500px;
+}
+
+.ref_left::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: -10px;
+	height: 70px;
+	width: 5px;
+	background-color: gray;
+	transition: height 0.3s ease-out;
+}
+
+.ref_left::before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	right: 0;
+	height: 5px;
+	width: 80px;
+	background-color: gray;
+	transition: width 0.3s ease-out;
+}
+
+.ref_block:nth-child(even) .ref_left::before {
+	left: 0;
+}
+
+.ref_block:nth-child(even) .ref_left::after {
+	left: auto;
+	right: -10px;
+}
+
+.ref_left:hover::before {
+	width: calc(100% + 10px);
+	background-color: #e4232a;
+}
+
+.ref_left:hover::after {
+	height: calc(100% + 10px);
+	background-color: #e4232a;
+}
+
+.ref_left:hover .effect {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #e4232a;
+	opacity: .7;
+	cursor: pointer;
+}
+
+.ref_right {
+	width: 50%;
+}
+
+.img_name {
+	width: 90%;
+	height: 40px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s ease-out;
+}
+
+.ref_left:hover .img_name {
+	background-color: #e4232a;
+	color: #fff;
+}
+
+@media (max-width: 63.9375em) {
+	.container {
+		width: 80%;
+	}
+}
+
+@media (max-width: 39.9375em) {
+	.container {
+		width: 90%;
+	}
+	
+	.ref_block {
+		display: flex;
+		align-items: center;
+		flex-direction: column !important;
+	}
+
+	.ref_left {
+		width: 90%;
+		margin: 0 !important;
+		margin-bottom: 50px !important;
+	}
+	.ref_right{
+		width: 90%;
+	}
+}

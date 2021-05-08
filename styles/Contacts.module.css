@@ -1,0 +1,125 @@
+.contacts {
+	min-height: calc(100vh - 210px);
+	width: 100%;
+}
+
+.contacts > h1 {
+	text-align: center;
+	padding: 30px 0;
+	width: 100%;
+}
+
+.connection {
+	width: 85%;
+	padding: 40px;
+	margin: 0 auto 30px auto;
+	box-shadow: 0 0 10px;
+	border-radius: 13px;
+	display: flex;
+	flex-direction: column;
+}
+
+.infos {
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+	margin-bottom: 30px;
+}
+
+.infos > div {
+	padding: 40px 10px;
+	max-width: 350px;
+	height: 180px;
+	border: 1px solid #c4c4c4;
+	border-radius: 13px;
+	margin: 0 10px;
+	width: 33.33%;
+	text-align: center;
+}
+
+.infos > div svg {
+	font-size: 40px;
+	margin-bottom: 20px;
+	color: #e4232a;
+}
+
+.infos p {
+	font-size: clamp(13px, 1.5vw, 20px);
+}
+
+.contact_form_map {
+	display: flex;
+	align-items: flex-start;
+}
+
+.contact_form_map > form {
+	flex: 0.5;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contact_form_map > form input,
+.contact_form_map > form textarea {
+	width: calc(50% - 20px);
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.contact_form_map > form input:nth-child(2) {
+	margin-left: 10px;
+}
+
+.contact_form_map > form textarea {
+	width: calc(100% - 30px);
+	min-height: 150px;
+}
+
+.contact_form_map > form button {
+	padding: 10px 35px;
+	text-transform: capitalize;
+	background-color: #e4232a;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	outline: none;
+	cursor: pointer;
+}
+
+.contact_form_map > .map {
+	flex: 0.5;
+}
+
+.contact_form_map > .map iframe {
+	min-height: 300px !important;
+}
+
+@media (max-width: 63.9375em) {
+	.contact_form_map {
+		flex-direction: column;
+	}
+	.contact_form_map > form input,
+	.contact_form_map > form textarea {
+		width: 100%;
+		margin: 10px 0 !important;
+	}
+	.contact_form_map > .map {
+		width: 100%;
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 39.9375em) {
+    .connection {
+        width: 95%;
+        box-shadow: none;
+    }
+	.infos {
+		flex-direction: column;
+	}
+	.infos > div {
+		width: 100%;
+        margin: 20px 0 !important;
+	}
+}
