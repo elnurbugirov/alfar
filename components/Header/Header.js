@@ -4,7 +4,7 @@ import { useMediaQuery } from "../useMediaQuery";
 import { IoMenu, IoClose } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import s from "../../styles/Header.module.css";
 
 const Header = () => {
